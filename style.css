@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+}
+
+.mazeWrapper {
+    height: 90vh;
+    width: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin: auto;
+    padding-top: 1vh;
+}
+
+.mazeRow {
+    display: flex;
+    justify-content: center;
+    height: 1%;
+    width: 100%;
+}
+
+.mazeRow > div {
+    height: 100%;
+    width: 1%;
+}
+
+.road {
+    background: #fff;
+}
+
+.wall {
+    background-color: #000;
+}
+
+.start {
+    background-color: red;
+}
+
+.end {
+    background-color: rgb(255, 0, 255);
+}
+
+.mazeWrapper.show .up,
+.mazeWrapper.show .down,
+.mazeWrapper.show .left,
+.mazeWrapper.show .right {
+    background-color: greenyellow;
+}

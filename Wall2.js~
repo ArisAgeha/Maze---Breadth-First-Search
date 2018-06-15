@@ -72,7 +72,7 @@ function initMaze(level) {
 				mazeWrapper.appendChild(row);
 			}
 			let footer = document.querySelector('footer');
-			footer.before(mazeWrapper)
+			footer.prepend(mazeWrapper)
 		}
 	}
 	

@@ -1,4 +1,6 @@
-let initMaze = require('./Wall2.js');
+import "babel-polyfill";
+import '../css/style.css'
+import initMaze from './Wall2.js'
 buildRandomMaze.addEventListener('click', function(e) {
     let ranArr = ['easy', 'normal', 'hard', 'lunatic', 'extra'];
     let res = ranArr[Math.floor(Math.random() * 5)];
@@ -45,7 +47,7 @@ function requestMaze(level) {
     let leftCoin = parseInt(document.querySelector('#coin').textContent);
     if (leftCoin > 0) {
         if (document.querySelector('.mazeWrapper')) {
-            document.querySelector('.mazeWrapper').remove();
+            $('.mazeWrapper').remove();
         }
         document.querySelector('#coin').textContent = leftCoin - 5;
         initMaze(level);

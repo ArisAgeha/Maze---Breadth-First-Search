@@ -1,5 +1,4 @@
-module.exports = initMaze;
-import '../css/style.css'
+export default initMaze
 function initMaze(level) {
 	console.time('a');
 	let size = {
@@ -73,8 +72,8 @@ function initMaze(level) {
 				row.className = 'mazeRow';
 				mazeWrapper.appendChild(row);
 			}
-			let footer = document.querySelector('footer');
-			footer.before(mazeWrapper)
+			let footer = document.querySelector('#mazeWrapper');
+			footer.appendChild(mazeWrapper)
 		}
 	}
 	

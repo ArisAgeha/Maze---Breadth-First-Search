@@ -1,3 +1,6 @@
+import "babel-polyfill";
+import '../css/style.css'
+import initMaze from './Wall2.js'
 buildRandomMaze.addEventListener('click', function(e) {
     let ranArr = ['easy', 'normal', 'hard', 'lunatic', 'extra'];
     let res = ranArr[Math.floor(Math.random() * 5)];
